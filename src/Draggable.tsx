@@ -15,6 +15,13 @@ import {
   LayoutChangeEvent,
 } from 'react-native'
 
+const screenDimensions = Dimensions.get('screen')
+
+const left = 20
+const right = screenDimensions.width - 20
+const top = 40
+const bottom = screenDimensions.height - 20
+
 const clamp = (number: number, min: number, max: number) => Math.max(min, Math.min(number, max))
 
 export interface IDraggableProps {
@@ -86,10 +93,10 @@ export function Draggable(props: IDraggableProps) {
     x = 0,
     y = 0,
     z = 1,
-    minX,
-    minY,
-    maxX,
-    maxY,
+    minX = left,
+    minY = top,
+    maxX = right,
+    maxY = bottom,
   } = props
 
   // The Animated object housing our xy value so that we can spring back
@@ -143,7 +150,7 @@ export function Draggable(props: IDraggableProps) {
   )
 
   const onPanResponderGrant = React.useCallback(
-    (e: GestureResponderEvent, gestureState: PanResponderGestureState) => {
+    () => {
       startBounds.current = getBounds()
       isDragging.current = true
       if (!shouldReverse) {

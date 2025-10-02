@@ -100,7 +100,7 @@ export const QaMenu = forwardRef(
             originalConsoleWarn(message, ...optionalParams)
             break
           case LogLevel.error:
-            setHasError(shouldAddNewLog)
+            // setHasError(shouldAddNewLog)
             originalConsoleError(message, ...optionalParams)
             break
           case LogLevel.info:

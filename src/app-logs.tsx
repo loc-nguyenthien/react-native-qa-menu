@@ -152,7 +152,7 @@ export const AppLogs: React.FC<
             <Text
               style={[styles.logItemMessageText, propStyles.logMessageStyle, { color: textColor }]}
             >
-              {message.replaceAll('%c', '').trim()}
+              {message.replace('%c', '').trim()}
             </Text>
           )}
           {typeof message === 'object' && (

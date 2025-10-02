@@ -21,6 +21,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "lint:fix": "yarn lint --fix",
     "prepack": "bob build",
+    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install && yarn example pods",
