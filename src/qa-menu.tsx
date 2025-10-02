@@ -21,7 +21,7 @@ import {
   View,
 } from 'react-native'
 import { getApplicationName, getVersion } from 'react-native-device-info'
-import Draggable from 'react-native-draggable'
+import { Draggable } from './Draggable'
 import { FileLogger } from 'react-native-file-logger'
 import Share, { ShareOptions } from 'react-native-share'
 

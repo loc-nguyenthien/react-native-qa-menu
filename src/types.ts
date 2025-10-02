@@ -1,7 +1,7 @@
 import type { Dayjs } from 'dayjs'
 import type { PropsWithChildren } from 'react'
 import type { ColorValue, StyleProp, TextStyle, ViewStyle } from 'react-native'
-import type { IDraggableProps } from 'react-native-draggable'
+import type { IDraggableProps } from './Draggable'
 
 export enum LogLevel {
   log,
